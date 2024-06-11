@@ -21,7 +21,7 @@ section, summary, time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font: mont;
 	vertical-align: baseline;}
 
 article, aside, details, figcaption, figure,
@@ -116,7 +116,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: rgba(255, 255, 255, 0.55);
-		font-family: Arial, Helvetica, sans-serif;
+		font-family: Georgia, 'Times New Roman', Times, serif;
 		font-size: 16.5pt;
 		font-weight: normal;
 		line-height: 1.75;
@@ -3872,33 +3872,57 @@ input, select, textarea {
 
 /* Intro */
 
-	#intro {
-		background-attachment: fixed;
-		background-image: url("images/intro.svg");
-		background-position: top right;
-		background-repeat: no-repeat;
-		background-size: 100% 100%;
-	}
+		#intro {
+			background-attachment: fixed;
+			background-image: url("images/intro.svg");
+			background-position: top right;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		#intro .inner {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+		}
+
+		#intro .content {
+			flex: 1;
+		}
+
+		#intro .profile-picture {
+			flex: 0 0 auto;
+			margin-left: 20px; /* Adjust as needed */
+		}
+
+		#intro .profile-picture img {
+			max-width: 00px; /* Adjust as needed */
+			border-radius: 0; /* Remove or set to 0 to make the image square */
+		}
 
 		#intro p {
 			font-size: 1.25em;
 		}
 
-			@media screen and (max-width: 980px) {
+		@media screen and (max-width: 980px) {
 
-				#intro p br {
-					display: none;
-				}
-
+			#intro p br {
+				display: none;
 			}
 
-			@media screen and (max-width: 736px) {
+		}
 
-				#intro p {
-					font-size: 1em;
-				}
+		@media screen and (max-width: 736px) {
 
+			#intro p {
+				font-size: 1em;
 			}
+
+		}
 
 		@media screen and (max-width: 1280px) {
 
