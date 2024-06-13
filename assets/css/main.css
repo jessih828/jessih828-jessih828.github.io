@@ -116,7 +116,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: rgb(21, 21, 21);
-		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		font-family: 'Segoe UI', Geneva, Verdana;
 		font-size: 16.5pt;
 		font-weight: normal;
 		line-height: 1.75;
@@ -172,6 +172,24 @@ input, select, textarea {
 	.social-icons a:hover {
 		color: #6b8a7a;
 	}
+
+	.skills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 5px; /* Adjust the space between the skill icons */
+		margin-bottom: 30px;
+	}
+	
+	.skill-icon {
+		background: #B4B4B8;
+		color: #686D76;
+		padding: 4px 12px;
+		border-radius: 7px;
+		font-size: 10pt;
+		display: inline-block;
+		text-align: center;
+		font-family: Verdana;
+	}
 	
 	.projects-container {
 		display: grid;
@@ -183,6 +201,7 @@ input, select, textarea {
 	.project {
 		border: 2px solid #D0D4CA; /* Border around each project */
 		padding: 20px; /* Space inside each project section */
+		text-align: justify;
 	}
 
 	.project img {
@@ -3850,8 +3869,8 @@ input, select, textarea {
 			border: 0;
 			color: rgb(21, 21, 21);
 			display: flex;
-			font-size: 0.65em;
-			font-family: 'Segoe UI';
+			font-size: 0.60em;
+			font-family: Verdana;
 			font-weight: bold;
 			letter-spacing: 0.25em;
 			line-height: 1.75;
@@ -3983,7 +4002,6 @@ input, select, textarea {
 		}
 
 /* Intro */
-
 		#intro {
 			background-attachment: fixed;
 			background-image: url("images/intro.svg");
