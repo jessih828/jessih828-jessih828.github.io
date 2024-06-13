@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Jessica Hsieh's Portfolio</title>
+		<title>Jessica Hsieh</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -13,12 +13,16 @@
 			<section id="sidebar">
 				<div class="inner">
 					<nav>
-						<ul>
+						<ul>				  
 							<li><a href="#intro">Hello There</a></li>
-							<li><a href="#one">About Me</a></li>
-							<li><a href="#two">My Project</a></li>
+							<li><a href="#one">My Projects</a></li>
+							<li><a href="#two">Skills & Experience</a></li>
 							<li><a href="#three">Get In Touch With Me</a></li>
 						</ul>
+						<div class="social-icons">
+							<a href="https://github.com/your-profile" target="_blank"><i class="fab fa-github"></i></a>
+							<a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+						</div>
 					</nav>
 				</div>
 			</section>
@@ -29,15 +33,14 @@
 				<section id="intro" class="wrapper style1 fullscreen fade-up">
 					<div class="inner">
 						<div class="content">
-							<h1>Hello</h1>
-							<h1>My name is Jessica</h1>
-							<p>Hello, Welcome to my portfolio</p>
+							<h1 class="underline">Hello, I'm Jessica,</h1>
+							<h1>a data scientist passionate about using ML & analytics to uncover insights</h1>
 							<ul class="actions">
 								<li><a href="Jessica Hsieh_Resume.pdf" download class="button download-btn">Download My Resume</a></li>
 							</ul>
 						</div>
 						<div class="profile-picture">
-							<img src="images/Jessica_image.jpeg" alt="Jessica Hsieh Profile Picture">
+							<img src="images/Jessica.svg" alt="Jessica Hsieh Profile Picture">
 						</div>
 					</div>
 				</section>
@@ -45,94 +48,72 @@
 				<!-- One -->
 					<section id="one" class="wrapper style3 fade-up">
 						<div class="inner">
-							<h2>About Me</h2>
-							<p>input info about me</p>
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Education</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+							<h2>My Projects</h2>
+							<style>
+								.actions {
+									display: flex;
+									flex-direction: column;
+									gap: 1em; /* Adjust the spacing between buttons */
+								}
+								.actions li {
+									list-style-type: none; /* Remove bullet points */
+								}
+								.actions .button {
+									display: block; /* Ensure buttons take up full width of their container */
+								}
+							</style>
+							<div class="projects-container">
+								<section class="project">
+									<img src="images/heart_disease_app.png" alt="heart disease image">
+									<h3>Heart Disease Prediction (Streamlit)</h3>
+									<p>The primary purpose of this app is to showcase my machine learning skills by building and evaluating a predictive model for heart disease. This includes demonstrating the use of various evaluation metrics and the importance of hyperparameter tuning in creating effective models</p>
+									<ul class="actions">
+										<li><a href="https://github.com/jessih828/Heart-Disease-Analytics?tab=readme-ov-file" class="button small-button">GitHub Repo</a></li>
+										<li><a href="https://heart-disease-ml-analytics.streamlit.app/" class="button small-button">Deploy Streamlit App</a></li>
+									</ul>
 								</section>
-								<section>
-									<span class="icon solid major fa-lock"></span>
-									<h3>Work Experience</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+								<section class="project">
+									<img src="images/muti class.png" alt="muti class classification">
+									<h3>Obesity Muti-Class Classification</h3>
+									<p>This project demonstrates the use of Apache Spark for classifying obesity levels in individuals based on various features. The analysis is implemented in a Jupyter Notebook and covers data processing, model training, and evaluation using PySpark's MLlib</p>
+									<ul class="actions">
+										<li><a href="https://github.com/jessih828/Modern-Data-Architecture-Muti-Class-Classification" class="button small-button">GitHub Repo</a></li>
+									</ul>
 								</section>
-								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Skills</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>Hobbies</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>Urna quis bibendum</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>Aliquam urna dapibus</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+								<section class="project">
+									<img src="images/SQL.png" alt="muti class classification">
+									<h3>SQL Database Management System</h3>
+									<p>This project contains the SQL scripts and database design for managing a mobile phone store's operations. Developed as a group project for SQL Based Data Architectures II, this project includes scripts for database creation, data insertion, and complex queries to answer business-critical questions</p>
+									<ul class="actions">
+										<li><a href="https://github.com/jessih828/SQL_DBManagementSystem" class="button small-button">GitHub Repo</a></li>
+									</ul>
 								</section>
 							</div>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
-							</ul>
 						</div>
 					</section>
 					
+
 				<!-- Two -->	
 					<section id="two" class="wrapper style2 spotlights">
 						<section>
-							<a href="javascript:void(0);" class="image"><img src="images/heart_disease_predic.jpg" alt="" data-position="25% 25%" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Heart Disease Prediction (Streamlit)</h2>
-									<p>The primary purpose of this app is to showcase my machine learning skills by building and evaluating a predictive model for heart disease. This includes demonstrating the use of various evaluation metrics and the importance of hyperparameter tuning in creating effective models.
-									</p>
-									<ul class="actions">
-										<li><a href="https://github.com/jessih828/Heart-Disease-Analytics?tab=readme-ov-file" class="button">Access GitHub</a></li>
-										<li><a href="https://heart-disease-ml-analytics.streamlit.app/" class="button">Access Streamlit App</a></li>
-									</ul>
+									<h2>Work Experience</h2>
+									<p>test test</p>
+									<h2>Education</h2>
+									<p>test test</p>
+									<h2>Skills</h2>
+									<p>test test</p>
+									<h2>Certification</h2>
+									<p>test test</p>
 								</div>
 							</div>
 						</section>
-
-						<section>
-							<a href="javascript:void(0);" class="image"><img src="images/obesity_data_architecture.png" alt="" data-position="50% 50%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Obesity Muti-Class Classification</h2>
-									<p>This project demonstrates the use of Apache Spark for classifying obesity levels in individuals based on various features. The analysis is implemented in a Jupyter Notebook and covers data processing, model training, and evaluation using PySpark's MLlib</p>
-									<ul class="actions">
-										<li><a href="https://github.com/jessih828/Modern-Data-Architecture-Muti-Class-Classification" class="button">Access GitHub</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="javascript:void(0);" class="image"><img src="images/SQL_database.jpg" alt="" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>SQL Database Management System</h2>
-									<p>This project contains the SQL scripts and database design for managing a mobile phone store's operations. Developed as a group project for SQL Based Data Architectures II, this project includes scripts for database creation, data insertion, and complex queries to answer business-critical questions.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/jessih828/SQL_DBManagementSystem" class="button">Access GitHub</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
 
 				<!-- Three -->
 					<section id="three" class="wrapper style1 fade-up">
 						<div class="inner">
 							<h2>Get In Touch With Me</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
 							<div class="split style1">
 								<section>
 									<ul class="contact">

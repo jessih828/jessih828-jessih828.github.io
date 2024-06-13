@@ -98,7 +98,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #DED5C4;
+		background: #F1F1F1;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -116,11 +116,111 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: rgb(21, 21, 21);
-		font-family: Georgia, 'Times New Roman', Times, serif;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 		font-size: 16.5pt;
 		font-weight: normal;
 		line-height: 1.75;
 	}
+
+	p {
+		font-size: 12pt; /* Change to the desired font size */
+		margin: 0 0 2em 0;
+	}
+	
+	.sidebar {
+		width: 250px;
+		background: #c0d6c5;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+	
+	.sidebar ul {
+		list-style: none;
+		padding: 0;
+	}
+	
+	.sidebar ul li {
+		margin: 20px 0;
+	}
+	
+	.sidebar ul li a {
+		text-decoration: none;
+		color: #2b463c;
+		font-size: 1em;
+	}
+	
+	.sidebar ul li a i {
+		margin-right: 10px;
+	}
+	
+	.social-icons {
+		margin-top: 50px;
+		display: flex;
+		flex-direction: row; 
+		gap: 15px; /* Add space between the icons */
+	}
+
+	.social-icons a {
+		text-decoration: none;
+		font-size: 1.5em !important; /* Increase the size of the icons */
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		border-bottom: none;
+	}
+	
+	.social-icons a:hover {
+		color: #6b8a7a;
+	}
+	
+	.projects-container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+		gap: 20px; /* Adjusts the space between projects */
+		padding: 20px; /* Optional: add padding around the container */
+	}
+	
+	.project {
+		border: 2px solid #D0D4CA; /* Border around each project */
+		padding: 20px; /* Space inside each project section */
+	}
+
+	.project img {
+		max-width: 100%; /* Ensures the image does not overflow */
+		height: auto; /* Maintains aspect ratio */
+		margin-bottom: 20px; /* Space between image and content */
+	}
+	
+
+	.vertical-line {
+		border-right: 2px solid #D0D4CA; /* Adjust thickness and color as needed */
+		padding-right: 20px; /* Space between the content and the line */
+		margin-right: 20px; /* Space on the right side of the section */
+	}
+	
+
+	.underline {
+		display: inline-block; /* Allows the underline to take the width of the text */
+		position: sticky; /* Positioning context for the pseudo-element */
+		font-size: 3em; /* Font size for the main heading */
+		font-weight: bold; /* Make the text bold */
+	}
+	
+	.underline::after {
+		content: '';
+		position: absolute;
+		width: 100%; /* Span the entire width of the text */
+		height: 0.10em; /* Thickness of the underline */
+		bottom: -0.1em; /* Position it just below the text */
+		left: 0;
+		background-color: orange; /* Orange color for the underline */
+	}
+	
+	.subtitle {
+		font-size: 2em; /* Font size for the subtitle */
+		margin-top: 20px; /* Space between the title and subtitle */
+	}
+	
 
 		@media screen and (max-width: 1680px) {
 
@@ -151,14 +251,14 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		transition: color 0.2s ease, border-bottom-color 0.2s ease;
-		border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
+		border-bottom: dotted 1px rgb(181, 193, 142);
 		color: inherit;
 		text-decoration: none;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #ffffff;
+			color: #6B8A7A;
 		}
 
 	strong, b {
@@ -175,7 +275,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #151515;
+		color: #365E32;
 		font-weight: bold;
 		line-height: 1.5;
 		margin: 0 0 0.5em 0;
@@ -197,10 +297,10 @@ input, select, textarea {
 		}
 
 			h1.major:after {
-				background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: linear-gradient(to right, #5e42a6, #b74e91);
+				background-image: -moz-linear-gradient(to right, #88AB8E, #AFC8AD);
+				background-image: -webkit-linear-gradient(to right, #88AB8E, #AFC8AD);
+				background-image: -ms-linear-gradient(to right, #88AB8E, #AFC8AD);
+				background-image: linear-gradient(to right, #88AB8E, #AFC8AD);
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
@@ -307,7 +407,7 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-bottom: solid 1px rgb(121, 135, 119);
+		border-bottom: solid 1px #6B8A7A;
 		margin: 2em 0;
 	}
 
@@ -1833,9 +1933,9 @@ input, select, textarea {
 		transition: border-color 0.2s ease;
 		background-color: transparent;
 		border: solid 1px !important;
-		border-color: rgb(120, 149, 178) !important;
+		border-color: rgb(95, 111, 82) !important;
 		border-radius: 3em;
-		color: #7895B2 !important;
+		color: #5F6F52 !important;
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.6em;
@@ -1851,6 +1951,15 @@ input, select, textarea {
 		text-transform: uppercase;
 		white-space: nowrap;
 	}
+
+/* Smaller Button for Second Page */
+	.small-button {
+		font-size: 0.6em; /* Smaller font size */
+		height: calc(2.75em + 2px); /* Adjust height */
+		line-height: 2.75em; /* Adjust line-height */
+		padding: 0 2em; /* Adjust padding */
+	}
+
 
 		input[type="submit"]:after,
 		input[type="reset"]:after,
@@ -1914,8 +2023,8 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #ffffff;
-			color: #312450 !important;
+			background-color: #5F6F52;
+			color: #5F6F52 !important;
 		}
 
 			input[type="submit"].primary:after,
@@ -1945,7 +2054,7 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			border-color: rgb(81, 130, 155) !important;
+			border-color: rgb(95, 111, 82) !important;
 		}
 
 			input[type="submit"]:hover:after,
@@ -1965,8 +2074,8 @@ input, select, textarea {
 			input[type="button"]:hover:active,
 			button:hover:active,
 			.button:hover:active {
-				border-color: #9BB0C1 !important;
-				background-color: #C7C8CC !important; /* light blue background color */
+				border-color: #5F6F52 !important;
+				background-color: #5F6F52 !important; /* light blue background color */
 				color: #ffffff !important; /* white text color */
 			}
 
@@ -2525,9 +2634,9 @@ input, select, textarea {
 			width: 2.5em;
 			height: 2.5em;
 			display: block;
-			background: #51829B;
+			background: #AEC3AE;
 			border-radius: 100%;
-			color: #312450;
+			color: #D1D8C5;
 			text-align: center;
 			line-height: 2.5em;
 			margin: 0 0 1.3em 0;
@@ -3238,19 +3347,19 @@ input, select, textarea {
 			}
 
 		.wrapper.alt {
-			background-color: #F9F9F9;
+			background-color: #FEFAF6;
 		}
 
 		.wrapper.style1 {
-			background-color: #F9F9F9;
+			background-color: #F5F7F8;
 		}
 
 		.wrapper.style1-alt {
 			background-color: #F9F9F9;
 		}
 
-		.wrapper.style2 {
-			background-color: #F9F9F9;
+		.wrapper.style2 { 
+			background-color: #F5F7F8;
 		}
 
 		.wrapper.style2-alt {
@@ -3258,11 +3367,11 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background-color: #F9F9F9;
+			background-color: #EEEEEE;
 		}
 
 		.wrapper.style3-alt {
-			background-color: #F9F9F9;
+			background-color: #F1F1F1;
 		}
 
 		.wrapper.fullscreen {
@@ -3526,7 +3635,7 @@ input, select, textarea {
 
 	#sidebar {
 		padding: 2.5em 2.5em 0.5em 2.5em ;
-		background: #E8DFCA;
+		background: #D1D8C5;
 		cursor: default;
 		height: 100vh;
 		left: 0;
@@ -3740,8 +3849,9 @@ input, select, textarea {
 			transition: color 0.2s ease;
 			border: 0;
 			color: rgb(21, 21, 21);
-			display: block;
-			font-size: 0.6em;
+			display: flex;
+			font-size: 0.65em;
+			font-family: 'Segoe UI';
 			font-weight: bold;
 			letter-spacing: 0.25em;
 			line-height: 1.75;
@@ -3767,10 +3877,10 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:after {
-				background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: linear-gradient(to right, #5e42a6, #b74e91);
+				background-image: -moz-linear-gradient(to right, #254336, #6B8A7A);
+				background-image: -webkit-linear-gradient(to right, #254336, #6B8A7A);
+				background-image: -ms-linear-gradient(to right, #254336, #6B8A7A);
+				background-image: linear-gradient(to right, #254336, #6B8A7A);
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
@@ -3779,11 +3889,11 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:hover {
-				color: rgb(48, 89, 115);
+				color: #6B8A7A;
 			}
 
 			#sidebar nav a.active {
-				color: #151515;
+				color: #5F6F52;
 			}
 
 				#sidebar nav a.active:after {
@@ -3879,10 +3989,12 @@ input, select, textarea {
 			background-image: url("images/intro.svg");
 			background-position: top right;
 			background-repeat: no-repeat;
-			background-size: 100% 100%;
+			background-size: 50% 50%;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			padding: 2.5em;
+			height: 50vh;
 		}
 
 		#intro .inner {
@@ -3898,11 +4010,11 @@ input, select, textarea {
 
 		#intro .profile-picture {
 			flex: 0 0 auto;
-			margin-left: 20px; /* Adjust as needed */
+			margin-left: 60px; /* Adjust as needed */
 		}
 
 		#intro .profile-picture img {
-			max-width: 00px; /* Adjust as needed */
+			max-width: 250px; /* Adjust as needed */
 			border-radius: 0; /* Remove or set to 0 to make the image square */
 		}
 
@@ -3932,4 +4044,30 @@ input, select, textarea {
 				background-attachment: scroll;
 			}
 
+		}
+
+		/* Wiggle Animation */
+
+		@keyframes wiggle {
+			0%, 100% {
+			transform: rotate(-5deg);
+			}
+			50% {
+			transform: rotate(5deg);
+			}
+		}
+		
+		.button {
+			display: inline-block;
+			transition: transform 0.2s; /* Smooth transition for other transformations */
+		}
+		
+		.button.wiggle {
+			animation: wiggle 0.2s;
+		}
+		
+		#intro .button:hover {
+			animation: wiggle 0.2s infinite;
+			animation-duration: 0.2s; 
+			animation-iteration-count: 2;
 		}
