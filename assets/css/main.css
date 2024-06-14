@@ -290,7 +290,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		color: #ffffff;
+		color: #365E32;
 		font-weight: bold;
 	}
 
@@ -4124,16 +4124,27 @@ input, select, textarea {
 
 		.timeline {
 			position: relative;
-			max-width: 800px;
+			max-width: 900px;
 			margin: 0 auto;
 		}
 		
+		.timeline::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 4px;
+			background: #D0D4CA;
+			left: 50%;
+			margin-left: -2px; /* Adjust this value if necessary to center the line */
+		}
+		
 		.timeline-item {
-			padding: 5px 20px; /* Reduced padding to make the height narrower */
+			padding: 10px 20px;
 			position: relative;
 			background: inherit;
 			width: 50%;
-			margin-top: 20px; /* Adjust this value to control the space above each item */
+			margin-top: -20px; /* Adjust this value to control the space above each item */
 		}
 		
 		.timeline-item:nth-child(odd) {
@@ -4144,35 +4155,63 @@ input, select, textarea {
 			left: 50%;
 		}
 		
-		.timeline-item::after {
+		.timeline-item::before {
 			content: '';
 			position: absolute;
+			top: 15px;
 			width: 25px;
 			height: 25px;
-			right: -12.5px;
-			background-color: #F5F7F8;
-			border: 4px solid #FF9F55;
-			top: 15px;
 			border-radius: 50%;
+			background: #F5F7F8;
+			border: 4px solid #D0D4CA;
 			z-index: 1;
 		}
 		
-		.timeline-item:nth-child(even)::after {
-			left: -12.5px;
+		.timeline-item:nth-child(odd)::before {
+			right: -13px; /* Adjust this value to position the line connector correctly */
+		}
+		
+		.timeline-item:nth-child(even)::before {
+			left: -13px; /* Adjust this value to position the line connector correctly */
 		}
 		
 		.timeline-content {
-			padding: 10px 15px; /* Reduced padding to make the height narrower */
+			padding: 10px 15px;
 			background-color: inherit;
 			position: relative;
 			border-radius: 6px;
 		}
 		
-		.timeline-content h3 {
-			margin-top: 0;
-			color: #000;
-		}
-		
 		.timeline-content p {
 			margin: 0;
 		}
+		
+		
+		.additional-info {
+			margin-top: 10px;
+		}
+		
+		.additional-info p {
+			margin: 5px 0;
+		}
+		
+		.skills-and-experience {
+			margin-bottom: 50px; /* Adjust this value to control the space between the header and the first box */
+		}
+		
+		.technology-header {
+			margin-bottom: 30px; /* Adjust this value to control the space between Technologies and the first box */
+		}
+		
+		.additional-info p {
+			margin: 5px 0; /* Existing margin for paragraphs */
+		}
+		
+		.margin-bottom {
+			margin-bottom: 50px !important; /* Specific margin for extra space */
+		}
+
+		.smaller-text {
+			font-size: 0.85em; /* This makes the text 85% of the normal font size. Adjust as needed */
+		}
+		
