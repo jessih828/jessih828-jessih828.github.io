@@ -1980,29 +1980,6 @@ input, select, textarea {
 		white-space: nowrap;
 	}
 
-	  
-	  .certification-link {
-		font-size: 1em; /* Adjusts to the size of a paragraph */
-		text-decoration: none; /* Removes underline */
-		color: inherit;
-		display: inline-flex; /* Ensures proper alignment */
-		align-items: center; /* Aligns items vertically */
-	  }
-	  
-	  .icon-custom {
-		width: 32px; /* Adjust the width as needed */
-		height: auto;
-		vertical-align: middle; /* Aligns the image with the text */
-		margin-right: 10px; /* Space between the icon and text */
-		border: none; /* Ensures no border is applied */
-	  }
-	  
-	  .certification-link img {
-		border: none; /* Ensures no border is applied */
-		text-decoration: none; /* Removes underline */
-	  }
-	  
-
 /* Smaller Button for Second Page */
 	.small-button {
 		font-size: 0.6em; /* Smaller font size */
