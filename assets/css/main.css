@@ -1,11 +1,5 @@
 @import url(fontawesome-all.min.css);
 
-/*
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -17,12 +11,13 @@ tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: mont;
-	vertical-align: baseline;}
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -174,51 +169,82 @@ input, select, textarea {
 	}
 
 	.skills {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 3px; 
-		margin-bottom: 10px;
+		margin-bottom: 0.5em;
 	}
 	
 	.skill-icon {
 		position: relative;
-		font-size: 14px; /* Adjust font size as needed */
-		padding: 0.4em 0.5em; /* Adjust padding to control the highlight size */
 		display: inline-block;
+		padding: 0.2em 0.4em;
+		margin: 0.2em;
+		font-size: 0.9em;
 		color: #000;
 	}
 	
 	.skill-icon::before {
 		content: '';
 		position: absolute;
-		top: 50%;
+		top: 0;
 		left: 0;
-		width: 98%;
-		height: 1.4em; /* Adjust height to match text size */
-		background: #FFD580; /* Highlighter color */
+		width: 100%;
+		height: 100%;
+		background-color: #f4d18b;
+		opacity: 0.5;
 		z-index: -1;
-		transform: translateY(-50%);
+	}
+
+	.actions {
+		margin-top: 0.5em;
 	}
 	
+	.small-button {
+		font-size: 0.8em; /* Make buttons slightly smaller */
+		padding: 0.4em 0.8em;
+	}
+
 	.projects-container {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
-		gap: 20px; /* Adjusts the space between projects */
-		padding: 10px; /* Optional: add padding around the container */
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Reduced from 300px */
+		gap: 1.5rem; /* Reduced from 2rem */
+		padding: 10px;
+		max-width: 1000px; /* Add this line to limit the overall width */
+		margin: 0 auto; /* Center the container */
 	}
 	
 	.project {
-		border: 2px solid #D0D4CA; /* Border around each project */
-		padding: 20px; /* Space inside each project section */
-		text-align: justify;
+		border: 1px solid #D0D4CA;
+		padding: 15px;
+		text-align: left; /* Change from justify to left */
+		font-size: 0.9em;
+	}
+	
+	.project h3 {
+		text-align: left;
+		font-size: 1.1em;
+		margin-bottom: 0.5em;
+	}
+	
+	.project p {
+		text-align: left;
+		font-size: 1em;
+		margin-bottom: 0.5em;
+	}
+	
+	.skills {
+		text-align: left;
+		margin-bottom: 0.5em;
+	}
+	
+	.actions {
+		text-align: left;
+		margin-top: 0.5em;
 	}
 
 	.project img {
-		max-width: 100%; /* Ensures the image does not overflow */
-		height: auto; /* Maintains aspect ratio */
-		margin-bottom: 20px; /* Space between image and content */
+		max-width: 100%;
+		height: auto;
+		margin-bottom: 15px; /* Reduced from 20px */
 	}
-	
 
 	.vertical-line {
 		border-right: 2px solid #D0D4CA; /* Adjust thickness and color as needed */
@@ -4215,3 +4241,117 @@ input, select, textarea {
 			font-size: 0.85em; /* This makes the text 85% of the normal font size. Adjust as needed */
 		}
 		
+		@media screen and (max-width: 736px) {
+			/* Sidebar adjustments */
+			#sidebar {
+				display: block;
+				height: auto;
+				position: relative;
+				width: 100%;
+				padding: 1em;
+			}
+		
+			#sidebar > .inner {
+				flex-direction: column;
+				align-items: center;
+			}
+		
+			#sidebar nav {
+				width: 100%;
+			}
+		
+			#sidebar nav ul {
+				flex-direction: column;
+			}
+		
+			#sidebar nav ul li {
+				margin: 0.5em 0;
+			}
+		
+			/* Intro section adjustments */
+			#intro {
+				flex-direction: column;
+				height: auto;
+				padding: 2em 1em;
+			}
+		
+			#intro .inner {
+				flex-direction: column;
+			}
+		
+			#intro .profile-picture {
+				margin-left: 0;
+				margin-top: 1em;
+			}
+		
+			#intro .profile-picture img {
+				max-width: 150px;
+			}
+		
+			/* Projects container adjustments */
+			.projects-container {
+				grid-template-columns: 1fr;
+				gap: 1rem;
+			}
+		
+			.project {
+				padding: 10px;
+			}
+		
+			.project h3 {
+				font-size: 1em;
+			}
+		
+			.project p {
+				font-size: 0.9em;
+			}
+		
+			.skill-icon {
+				font-size: 0.8em;
+				padding: 0.2em 0.3em;
+			}
+		
+			.small-button {
+				font-size: 0.7em;
+				padding: 0.3em 0.6em;
+			}
+		
+			/* Timeline adjustments */
+			.timeline::before {
+				left: 0;
+			}
+		
+			.timeline-item {
+				width: 100%;
+				padding-left: 30px;
+			}
+		
+			.timeline-item:nth-child(even) {
+				left: 0;
+			}
+		
+			.timeline-item::before {
+				left: -9px;
+			}
+		
+			/* General mobile adjustments */
+			body, input, select, textarea {
+				font-size: 14pt;
+			}
+		
+			h1 {
+				font-size: 2em;
+			}
+		
+			h2 {
+				font-size: 1.5em;
+			}
+		
+			h3 {
+				font-size: 1.25em;
+			}
+		
+			.wrapper > .inner {
+				padding: 2em 1em;
+			}
+		}
